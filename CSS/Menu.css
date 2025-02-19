@@ -1,0 +1,182 @@
+@import "Colors.css";
+
+h2{
+    color: var(--font);
+}
+
+.header{
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url("../RES/IMG/food.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border: 0 ;
+}
+
+
+
+.welcome-text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.welcome-text h1{
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.scroll p{
+    color: white;
+    font-size: 1.8rem;
+}
+
+
+h2{
+    color: var(--fontw);
+}
+
+.patern{
+    width: 40vw;
+}
+
+.paternb{
+    transform: rotateZ(180deg);
+    width: 40vw;
+}
+
+.side-pics{
+    width: 20%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.menu-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*----------------------*/
+
+p{
+    font-weight: initial;
+    font-size: 1rem;
+    padding-bottom: 15px;
+    color: black;
+}
+
+.menu-pic-text{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 90%;
+}
+
+.etterem-text{
+    text-align: right;
+    margin-right: 2rem;
+}
+
+.etterem-img{
+    width: 20rem;
+    height: 15rem;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.etlap{
+    width: 40%;
+    min-width: 31rem;
+}
+
+.etlap-table{
+    font-size: 0.9rem;
+    border-collapse: collapse;
+}
+
+.etlap-table caption{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.etlap-table th{
+    font-size: 1rem;
+    color: white;
+    background-color: #D5C18F;
+    padding: 4px 10px;
+    text-transform: uppercase;
+}
+
+.etlap-table th.etel{
+    text-align: left;
+}
+
+.etlap-table th.ar{
+    text-align: center;
+}
+
+.etlap-table th.allergenek{
+    text-align: right;
+}
+
+.etlap-table tr:nth-of-type(2) th{
+    background-color: #E2D2A8;
+}
+
+.etlap-table tr{
+    background-color: #F4E5BD;
+}
+
+.etlap-table tr:nth-of-type(even){
+    background-color: #FFF4D9;
+}
+
+.etlap-table td:first-of-type{
+    text-align: left;
+}
+
+.etlap-table td{
+    text-align: right;
+    padding: 4px 10px;
+}
+
+.col-etel{
+    width: 67%;
+}
+
+.col-ar{
+    width: 8%;
+    min-width: 7rem;
+}
+
+.col-allergenek{
+    width: 25%;
+}
+
+@media all  and (max-width: 900px) {
+    .menu-pic-text{
+        display:initial;
+    }
+    .etterem-img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .etterem-text{
+        text-align: center;
+        margin-right: 0;
+    }
+
+
+
+    .side-pics{
+        display: none;
+    }
+}
+
+
+
+/*© Wellness Center Mackovic Mark (IW8RXX) , Makó Ádám Péter (PH2BC8) 2023, Szegedi Tudományegyetem*/

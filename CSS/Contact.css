@@ -1,0 +1,282 @@
+@import "Colors.css";
+
+h2{
+    color: var(--font);
+}
+
+.header{
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url("../RES/IMG/contact.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border: 0 ;
+}
+
+
+.welcome-text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.welcome-text h1{
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+
+h2{
+    color: var(--fontw);
+}
+
+iframe{
+    border-radius: 20px;
+    padding: 1rem;
+    height: 30vh;
+    width: 75vw;
+}
+
+button{
+    border: none;
+    background-color: var(--secondary);
+    height: 50px;
+    width: 150px;
+    padding: 5px 5px 5px 10px;
+    color: var(--font);
+    font-size: 0.8rem;
+    font-weight: 1000;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 8px 24px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.buttons button{
+    background-color: var(--primary);
+    color: white;
+}
+
+
+
+
+button:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(255, 255, 255, 0.24);
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function:cubic-bezier(.47,1.5,.41,.8);
+}
+
+button:before{
+    transform: scaleX(0);
+}
+
+button:hover:before{
+    transform: scaleX(1);
+}
+
+
+
+
+/*-----------------------*/
+
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.contact-text{
+    font-size: 1rem;
+    min-width: 30rem;
+    margin-right: 2rem;
+}
+
+.contact-img{
+    width: 100%;
+    max-width: 45rem;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.contact-text li{
+    list-style: none;
+}
+
+.contact-text a{
+    color: var(--font);
+    text-decoration: underline 0.1rem;
+}
+
+h1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.days{
+    float: left;
+}
+
+.time{
+    text-align: right;
+}
+
+.open{
+    max-width: 25rem;
+}
+
+.closed p{
+    margin-top: 1rem;
+    color: var(--font);
+    font-size: 1rem;
+}
+
+.closed li{
+    margin-left: 2rem;
+    list-style: disc;
+}
+
+.contact-formsheet {
+    margin-top: 2rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 1.5rem 2.5rem;
+    background-color: rgba(213, 212, 212, 0.06);
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+}
+.contact-formsheet .title{
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.form-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-left{
+    width: 48%;
+}
+
+.form-right{
+    width: 48%;
+}
+
+.input{
+    margin-bottom: 1rem;
+}
+
+.text-input{
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: solid black 1px;
+}
+
+.text-input:focus{
+    border: solid 2px var(--font);
+    outline: none;
+    background-color: #e8e4e4;
+}
+
+#uzenet{
+    resize: none;
+}
+
+input.button{
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+@media all and (max-width: 1200px) {
+    .contact-formsheet{
+        flex-direction: column;
+        width: 50rem;
+    }
+
+    .contact-formsheet .title{
+        width: 100%;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+
+    }
+}
+
+@media all and (max-width: 900px) {
+    .contact{
+        display: initial;
+    }
+
+    .contact-img{
+        max-width: 25rem;
+        display: block;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-text{
+        margin-right: 0;
+    }
+
+    .contact-formsheet{
+        flex-direction: column;
+        width: 30rem;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+    }
+
+}
+/*© Wellness Center Mackovic Mark (IW8RXX) , Makó Ádám Péter (PH2BC8) 2023, Szegedi Tudományegyetem*/

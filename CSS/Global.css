@@ -1,0 +1,495 @@
+@import "Colors.css";
+
+@font-face {
+    src: url("../RES/FONTS/Gotu-Regular.ttf");
+    font-family: Gotu;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gotu, sans-serif;
+    font-weight: 400;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--secondary);
+    height: 100vh;
+    overflow-y: scroll;
+    position: absolute;
+    overflow-x: hidden;
+}
+
+main{
+    width: 100vw;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+
+
+nav ul{
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+
+    list-style-type: none;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+
+
+nav a{
+    text-decoration: none;
+    font-weight: 100;
+    color: white;
+    font-size: 1.2rem;
+    padding: 7px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.logos{
+    width: 1.5rem;
+
+}
+
+.aa a:before{
+    content: '';
+    width: 0;
+    height: 25%;
+    background: var(--tertiary);
+    border-radius: 2px;
+    position: absolute;
+    transition: width 0.5s;
+    bottom: 15px;
+    z-index: -3;
+}
+
+a:hover:before{
+    width: 100%;
+}
+
+
+nav {
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+}
+
+nav img{
+    width: 7rem;
+}
+
+
+.nav-links ul li{
+    padding: 4px 6px;
+}
+
+
+.welcome-text p{
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+
+
+footer{
+    min-height: 60vh;
+    width: 100%;
+    background-color: #31525b;
+    position: relative;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    padding: 2rem;
+    color: var(--fontw);
+}
+
+.mail-box h2{
+    color: var(--fontw);
+}
+
+.separation h2 span{
+    color: var(--fontw);
+}
+
+
+footer p{
+    font-size: 1rem;
+    color: var(--fontw);
+}
+
+.fix-image-container button{
+    background-color: var(--primary);
+    color: white;
+    text-transform: uppercase;
+}
+
+.scroll {
+    transform: rotate(-90deg);
+    display: flex;
+    position: absolute;
+    z-index: 50;
+    background-color: transparent;
+    top: 70%;
+    left: -1rem;
+    width: 200px;
+    transition: 1.5s;
+    opacity: 1;
+}
+
+#arrow{
+    transform: rotate(90deg);
+    height: 80px;
+    width: 50px;
+    right: 220px;
+    bottom: -6px;
+    position: absolute;
+}
+
+
+.scroll.active{
+    opacity: 0;
+}
+
+
+
+
+.mail-box{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-top: 20px;
+    flex-direction: column;
+}
+
+.mail-input{
+    border: none;
+    height: 50px;
+    width: 250px;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+
+
+
+.mail-input:focus{
+    outline: none;
+    background-color: var(--secondary);
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    border: solid #ffffff 2px;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+input[type='submit']{
+    background-color: #a55050f5;
+    border-radius: 20px;
+    border:solid grey 1px;
+    padding: 8px;
+    pointer-events: all;
+    color: rgba(231, 217, 217, 0.79);
+
+}
+
+
+
+button{
+    border: none;
+    background-color: var(--secondary);
+    height: 50px;
+    width: 150px;
+    padding: 5px 5px 5px 10px;
+    color: var(--font);
+    font-size: 0.8rem;
+    font-weight: 1000;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 8px 24px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+
+
+    button:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(255, 255, 255, 0.24);
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function:cubic-bezier(.47,1.5,.41,.8);
+}
+
+button:before{
+    transform: scaleX(0);
+}
+
+button:hover:before{
+    transform: scaleX(1);
+}
+
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8rem;
+    align-items: flex-start;
+}
+.separation{
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: solid 1px var(--font);
+}
+
+h2{
+    margin-bottom: 30px;
+    font-weight: 800;
+    color: var(--fontw);
+}
+
+h1{
+    color: var(--font);
+}
+
+blockquote{
+    margin-top: 20px;
+    width: 800px;
+    color: var(--font);
+}
+
+
+.separation a{
+    text-transform: none;
+    font-weight: 600;
+    color: var(--fontw);
+}
+span{
+    margin-bottom: 10px;
+}
+
+#footer-one{
+    border:none;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    z-index: unset;
+    bottom: 0;
+}
+
+.social-container{
+    display: flex;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+
+.social{
+    height: 2rem;
+    border-top: 10rem;
+}
+
+th{
+    width: 200px;
+    font-weight: 550;
+    font-size: 1rem;
+
+}
+
+p{
+    font-weight: 550;
+    font-size: 2rem;
+    padding-bottom: 5px;
+    color: white;
+}
+
+
+#to-top{
+    height: 35px;
+}
+
+.to-top{
+    height: 80px;
+    width: 80px;
+    background-color: var(--secondary);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    pointer-events: none;
+    z-index: 11;
+    right: 35px;
+    bottom: 35px;
+    transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+    transform: translateY(150px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0 -23px 25px 0 inset, rgba(0, 0, 0, 0.15) 0 -36px 30px 0 inset, rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset, rgba(0, 0, 0, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 4px 2px, rgba(0, 0, 0, 0.09) 0 8px 4px, rgba(0, 0, 0, 0.09) 0 16px 8px, rgba(0, 0, 0, 0.09) 0 32px 16px;
+}
+
+
+
+.to-top.active{
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.to-top:hover{
+    transform: scale(1.1);
+}
+
+#menu{
+    height: 3rem;
+    display: none;
+}
+
+#x{
+    display: none;
+}
+
+
+
+@media all  and (max-width: 1200px) {
+
+    #menu{
+        display: block;
+        animation: none;
+        font-size: 1rem;
+        height: 3rem;
+        width: 3rem;
+        margin: 2rem;
+    }
+    #x{
+        display: block;
+        animation: none;
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+
+    .side-menu-button{
+        display: none;
+    }
+
+    nav a{
+        text-decoration: none;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.2rem;
+        position: relative;
+        z-index: 2;
+        gap: 0.5rem;
+        transition: width 1s;
+    }
+
+
+    .nav-links{
+        background-color: rgba(0, 0, 0, 0.18);
+        position: absolute;
+        top: 0;
+        right: -500px;
+        border-bottom-left-radius: 10%;
+        border-top-left-radius: 10%;
+        padding: 2rem;
+        transition: all 800ms cubic-bezier(.47,1.64,.41,.8);
+
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .welcome-text h1{
+        font-size: 2rem;
+    }
+
+    .welcome-text p{
+        font-size: 0.8rem;
+    }
+
+    .review-table-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-table{
+        margin-top: 1rem;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review{
+        flex-direction: column;
+    }
+
+    .review-pic-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .review-img{
+        height: 30rem;
+        width: 22rem;
+        transition: transform 0.2s ease-in-out;
+    }
+
+
+    .separation{
+        border: none;
+        margin-top: 3rem;
+    }
+
+
+    .social-container{
+        margin-top: 2rem;
+    }
+
+    #footer-one p{
+        max-width: 300px;
+        text-align: center;
+    }
+}
+/*© Wellness Center Mackovic Mark (IW8RXX) , Makó Ádám Péter (PH2BC8) 2023, Szegedi Tudományegyetem*/
+
+

@@ -1,0 +1,328 @@
+.header{
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url("../RES/IMG/header.jpeg");
+    background-color: #bbbbbb;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border: 0 ;
+}
+
+.welcome-text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.welcome-text h1{
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+
+/*--------------------------*/
+.review{
+    min-height: 60vh;
+    width: 100vw;
+    background-image: linear-gradient(to left, #d5d4d4, #ffffff);
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+
+}
+
+
+.rev-title{
+    color: var(--font);
+    font-size: 5rem;
+    margin: 3rem 1rem 1rem 1rem;
+    opacity: 1;
+    transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+    transform: translateY(150px);
+}
+
+.rev-title.active{
+    transform: translateY(0);
+}
+
+.review p{
+    color: rgba(0, 0, 0, 0.48);
+    font-size: 1rem;
+
+}
+
+.review-table-container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding: 5rem 0;
+    justify-content: space-evenly;
+    transition: 3s;
+    opacity: 0;
+}
+
+.review-table{
+    height: 12rem;
+    width: 25rem;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    transition: 0.5s;
+
+}
+
+.review-table-container.active{
+    opacity: 1;
+}
+
+
+.review-table:hover{
+    transform: scale(1.2);
+}
+
+.image{
+    display: flex;
+    gap: 1rem;
+}
+
+.profpics{
+    height: 4rem;
+    border-radius: 50%;
+
+}
+
+.profname{
+    font-size: 1.5rem;
+    color: var(--font);
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.proftext{
+    font-size: 0.7rem;
+    color: var(--font);
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textname {
+    display: flex;
+    flex-direction: column;
+}
+
+.stars{
+    height: 2rem;
+}
+
+
+.review-table:hover{
+    box-shadow: rgb(33, 32, 32) 0 8px 24px;
+    background-color: #ffffff;
+}
+
+.review-pic-container{
+    display: flex;
+    width: 100vw;
+    padding: 5rem 0;
+    justify-content: space-around;
+}
+
+
+.review-img{
+    height: 40rem;
+    width: 26rem;
+    box-shadow: rgb(255, 255, 255) 0 8px 24px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.img-shadow{
+    box-shadow: -120px 0 0 -60px  rgba(0,0,0,0.03),120px 0 0 -60px rgba(0,0,0,0.03);
+}
+
+.review-img:hover{
+    transform: scale(1.1);
+}
+
+
+.fix-image-container{
+    width: 100vw;
+    height: 65vh;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/*--------------------------*/
+.deep-img{
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("../RES/IMG/deeppic.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+    filter: blur(1px) contrast(0.9);
+}
+
+
+.deep-text h2{
+    font-size: 4rem;
+    z-index: 100;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 70rem;
+    text-align: center;
+}
+
+.deep-text p{
+    font-size: 1.2rem;
+    max-width: 50rem;
+    display: flex;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 6rem;
+}
+
+/*--------------------------*/
+.advice{
+    min-height: 80vh;
+    width: 100%;
+    background-color: #FFF8EE;
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(to right, #d5d4d4, #fff8ee);
+}
+
+.advice-container{
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.advice-text{
+    display: flex;
+    max-width: 65%;
+}
+
+#rotated-text{
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: 0 100%;
+    height: 20px;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: transparent;
+    position: absolute;
+
+}
+
+#advice-else{
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#advice-else h1{
+    color: var(--font);
+    font-size: 3rem;
+    text-align: start;
+}
+
+#advice-else p{
+    font-size: 1rem;
+    color: #575353;
+    text-align: start;
+    padding: 0;
+}
+
+#advice-else li{
+    text-align: start;
+    color: #575353;
+}
+#lista{
+    margin-top: 1rem;
+}
+
+
+
+.advice-image-container{
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 6rem;
+}
+
+.advice-pic{
+    height: 60vh;
+    transition: transform 0.2s ease-in-out;
+}
+
+.advice-pic:hover{
+    transform: scale(1.1);
+}
+
+
+
+@media all  and (max-width: 1200px) {
+    #rotated-text{
+        display: none;
+    }
+
+    .advice{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, #d5d4d4, #fff8ee);
+    }
+
+    .advice-text{
+        max-width: 60%;
+    }
+
+
+
+    #advice-else p{
+        text-align: start;
+    }
+
+    .advice-pic{
+        height: 40vh;
+    }
+
+    .deep-text h2{
+        font-size: 3rem;
+    }
+
+    .rev-title{
+        font-size: 3rem;
+    }
+
+}
+/*© Wellness Center Mackovic Mark (IW8RXX) , Makó Ádám Péter (PH2BC8) 2023, Szegedi Tudományegyetem*/
